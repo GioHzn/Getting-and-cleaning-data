@@ -43,11 +43,11 @@ names(Label) <- "Activity"
 names(Subject) <- "Subject"
 # Note the order or binding
 CleanData <- cbind(Subject, Label, Data)
-write.table(CleanData, "Clean_Data.txt")
+write.table(CleanData, "Clean_Data.txt", row.names = F)
 
 
 # 5. From the data set in step 4, creates a second, independent tidy data set 
 # with the average of each variable for each activity and each subject.
 library(dplyr)
 DataAverage <- CleanData %>% group_by(Subject, Activity) %>% summarise_all(mean)
-write.table(DataAverage, "Data_Average.txt")
+write.table(DataAverage, "Data_Average.txt", row.names = F)
