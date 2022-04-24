@@ -7,7 +7,7 @@ unzip("Dataset.zip")
 # 1. Merges the training and the test sets to create one data set.
  ## Read files and bind them together
 Data <- rbind(read.table("UCI HAR Dataset/train/X_train.txt"), read.table("UCI HAR Dataset/test/X_test.txt"))
-Label <- rbind(read.table("UCI HAR Dataset/train/Y_train.txt"), read.table("UCI HAR Dataset/test/Y_test.txt"))
+Label <- rbind(read.table("UCI HAR Dataset/train/y_train.txt"), read.table("UCI HAR Dataset/test/y_test.txt"))
 Subject <- rbind(read.table("UCI HAR Dataset/train/subject_train.txt"), read.table("UCI HAR Dataset/test/subject_test.txt"))
 
 
